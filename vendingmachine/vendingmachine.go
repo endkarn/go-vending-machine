@@ -25,3 +25,7 @@ func (v VendingMachine) ShowTotalBalance() int {
 func BuyDrink(drink string) string {
 	return drink
 }
+
+func ReturnCoinsByTotalBalance() string {
+	return "T"
+}
