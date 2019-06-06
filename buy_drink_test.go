@@ -10,9 +10,9 @@ func TestBuyDrink_CC_WithVendingMachineBalanceIs_12_ShouldGet_CC_(t *testing.T) 
 	//arrange
 	v := vm.NewVendingMachine()
 	expectedResult := "CC"
+	v.TotalBalance = 12
 
 	//action
-	v.TotalBalance = 12
 	actualResult := vm.BuyDrink("CC")
 
 	//assert
@@ -27,9 +27,9 @@ func TestBuyDrink_DW_WithVendingMachineBalanceIs_7_ShouldGet_DW_(t *testing.T) {
 	//arrange
 	v := vm.NewVendingMachine()
 	expectedResult := "DW"
+	v.TotalBalance = 7
 
 	//action
-	v.TotalBalance = 7
 	actualResult := vm.BuyDrink("DW")
 
 	//assert
@@ -44,9 +44,9 @@ func TestBuyDrink_SD_WithVendingMachineBalanceIs_18_ShouldGet_SD_(t *testing.T) 
 	//arrange
 	v := vm.NewVendingMachine()
 	expectedResult := "SD"
+	v.TotalBalance = 18
 
 	//action
-	v.TotalBalance = 18
 	actualResult := vm.BuyDrink("SD")
 
 	//assert
