@@ -5,9 +5,8 @@ type VendingMachine struct {
 	coinMap      map[string]int
 }
 
-func (v *VendingMachine) insertCoin(coin string) int {
+func (v *VendingMachine) insertCoin(coin string) {
 	v.totalBalance += v.coinMap[coin]
-	return v.totalBalance
 }
 
 func newVendingMachine() VendingMachine {
