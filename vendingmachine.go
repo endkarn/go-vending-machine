@@ -18,3 +18,7 @@ func newVendingMachine() VendingMachine {
 	coinMap["O"] = 1
 	return VendingMachine{coinMap: coinMap}
 }
+
+func (v VendingMachine) showTotalBalance() int {
+	return v.totalBalance
+}

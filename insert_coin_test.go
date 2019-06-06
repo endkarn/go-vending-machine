@@ -9,7 +9,8 @@ func TestInsertCoinBy_T_VendingShouldHaveBalance_10(t *testing.T) {
 	expectedResult := 10
 
 	//action
-	actualResult := v.insertCoin("T")
+	v.insertCoin("T")
+	actualResult := v.showTotalBalance()
 
 	//assert
 	if actualResult != expectedResult {
@@ -25,7 +26,8 @@ func TestInsertCoinBy_F_VendingShouldHaveBalance_F(t *testing.T) {
 	expectedResult := 5
 
 	//action
-	actualResult := v.insertCoin("F")
+	v.insertCoin("F")
+	actualResult := v.showTotalBalance()
 
 	//assert
 	if actualResult != expectedResult {
@@ -41,7 +43,8 @@ func TestInsertCoinBy_TW_VendingShouldHaveBalance_2(t *testing.T) {
 	expectedResult := 2
 
 	//action
-	actualResult := v.insertCoin("TW")
+	v.insertCoin("TW")
+	actualResult := v.showTotalBalance()
 
 	//assert
 	if actualResult != expectedResult {
@@ -57,7 +60,8 @@ func TestInsertCoinBy_O_VendingShouldHaveBalance_1(t *testing.T) {
 	expectedResult := 1
 
 	//action
-	actualResult := v.insertCoin("O")
+	v.insertCoin("O")
+	actualResult := v.showTotalBalance()
 
 	//assert
 	if actualResult != expectedResult {
@@ -74,7 +78,8 @@ func TestInsertCoinBy_ABC_VendingShouldHaveBalance_0(t *testing.T) {
 	expectedResult := 0
 
 	//action
-	actualResult := v.insertCoin("ABC")
+	v.insertCoin("ABC")
+	actualResult := v.showTotalBalance()
 
 	//assert
 	if actualResult != expectedResult {
@@ -92,7 +97,8 @@ func TestInsertCoinBy_T_F_VendingShouldHaveBalance_15(t *testing.T) {
 
 	//action
 	v.insertCoin("T")
-	actualResult := v.insertCoin("F")
+	v.insertCoin("F")
+	actualResult := v.showTotalBalance()
 
 	//assert
 	if actualResult != expectedResult {
