@@ -33,3 +33,35 @@ func TestInsertCoinBy_F_VendingShouldHaveBalance_F(t *testing.T) {
 	}
 
 }
+
+func TestInsertCoinBy_TW_VendingShouldHaveBalance_2(t *testing.T) {
+
+	//arrange
+	coin := "TW"
+	expectedResult := 2
+
+	//action
+	actualResult := insertCoin(coin)
+
+	//assert
+	if actualResult != expectedResult {
+		t.Errorf("get %v but excepted %v", actualResult, expectedResult)
+	}
+
+}
+
+func TestInsertCoinBy_O_VendingShouldHaveBalance_1(t *testing.T) {
+
+	//arrange
+	coin := "O"
+	expectedResult := 1
+
+	//action
+	actualResult := insertCoin(coin)
+
+	//assert
+	if actualResult != expectedResult {
+		t.Errorf("get %v but excepted %v", actualResult, expectedResult)
+	}
+
+}
