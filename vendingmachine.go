@@ -1,6 +1,9 @@
 package vendingmachine
 
 func insertCoin(coin string) int {
+	if coin == "T" {
+		return 10
+	}
 	if coin == "F" {
 		return 5
 	}
@@ -10,5 +13,5 @@ func insertCoin(coin string) int {
 	if coin == "O" {
 		return 1
 	}
-	return 10
+	return 0
 }
