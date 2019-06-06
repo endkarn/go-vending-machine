@@ -5,7 +5,7 @@ import "testing"
 func TestInsertCoinBy_T_VendingShouldHaveBalance_10(t *testing.T) {
 
 	//arrange
-	v := VendingMachine{}
+	v := newVendingMachine()
 	expectedResult := 10
 
 	//action
@@ -21,7 +21,7 @@ func TestInsertCoinBy_T_VendingShouldHaveBalance_10(t *testing.T) {
 func TestInsertCoinBy_F_VendingShouldHaveBalance_F(t *testing.T) {
 
 	//arrange
-	v := VendingMachine{}
+	v := newVendingMachine()
 	expectedResult := 5
 
 	//action
@@ -37,7 +37,7 @@ func TestInsertCoinBy_F_VendingShouldHaveBalance_F(t *testing.T) {
 func TestInsertCoinBy_TW_VendingShouldHaveBalance_2(t *testing.T) {
 
 	//arrange
-	v := VendingMachine{}
+	v := newVendingMachine()
 	expectedResult := 2
 
 	//action
@@ -53,7 +53,7 @@ func TestInsertCoinBy_TW_VendingShouldHaveBalance_2(t *testing.T) {
 func TestInsertCoinBy_O_VendingShouldHaveBalance_1(t *testing.T) {
 
 	//arrange
-	v := VendingMachine{}
+	v := newVendingMachine()
 	expectedResult := 1
 
 	//action
@@ -70,7 +70,7 @@ func TestInsertCoinBy_O_VendingShouldHaveBalance_1(t *testing.T) {
 func TestInsertCoinBy_ABC_VendingShouldHaveBalance_0(t *testing.T) {
 
 	//arrange
-	v := VendingMachine{}
+	v := newVendingMachine()
 	expectedResult := 0
 
 	//action
@@ -87,7 +87,7 @@ func TestInsertCoinBy_ABC_VendingShouldHaveBalance_0(t *testing.T) {
 func TestInsertCoinBy_T_F_VendingShouldHaveBalance_15(t *testing.T) {
 
 	//arrange
-	v := VendingMachine{}
+	v := newVendingMachine()
 	expectedResult := 15
 
 	//action
