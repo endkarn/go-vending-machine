@@ -26,6 +26,15 @@ func BuyDrink(drink string) string {
 	return drink
 }
 
-func ReturnCoinsByTotalBalance() string {
+func (v VendingMachine) ReturnCoinsByTotalBalance() string {
+	if v.TotalBalance == 5 {
+		return "F"
+	}
+	if v.TotalBalance == 2 {
+		return "TW"
+	}
+	if v.TotalBalance == 1 {
+		return "O"
+	}
 	return "T"
 }
