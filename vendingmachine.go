@@ -1,10 +1,15 @@
 package vendingmachine
 
-func insertCoin(coin string) int {
+type VendingMachine struct {
+	totalBalance int
+}
+
+func (v *VendingMachine) insertCoin(coin string) int {
 	coinMap := make(map[string]int)
 	coinMap["T"] = 10
 	coinMap["F"] = 5
 	coinMap["TW"] = 2
 	coinMap["O"] = 1
-	return coinMap[coin]
+	v.totalBalance += coinMap[coin]
+	return v.totalBalance
 }
