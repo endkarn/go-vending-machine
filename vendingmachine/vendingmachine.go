@@ -23,5 +23,11 @@ func (v VendingMachine) ShowTotalBalance() int {
 }
 
 func BuyDrink(drink string) string {
+	if drink == "DW" {
+		return "DW"
+	}
+	if drink == "SD" {
+		return "SD"
+	}
 	return "CC"
 }
