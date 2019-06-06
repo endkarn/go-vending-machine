@@ -1,17 +1,23 @@
 package vendingmachine
 
 func insertCoin(coin string) int {
+	coinMap := make(map[string]int)
+	coinMap["T"] = 10
+	coinMap["F"] = 5
+	coinMap["TW"] = 2
+	coinMap["O"] = 1
+
 	if coin == "T" {
-		return 10
+		return coinMap["T"]
 	}
 	if coin == "F" {
-		return 5
+		return coinMap["F"]
 	}
 	if coin == "TW" {
-		return 2
+		return coinMap["TW"]
 	}
 	if coin == "O" {
-		return 1
+		return coinMap["O"]
 	}
 	return 0
 }
