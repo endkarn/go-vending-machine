@@ -21,3 +21,7 @@ func NewVendingMachine() VendingMachine {
 func (v VendingMachine) ShowTotalBalance() int {
 	return v.TotalBalance
 }
+
+func BuyDrink(drink string) string {
+	return "CC"
+}
