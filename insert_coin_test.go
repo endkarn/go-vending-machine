@@ -2,7 +2,7 @@ package vendingmachine
 
 import "testing"
 
-func TestInsertCoinBy_T_VendingShouldHaveBalance_10(t *testing.T) {
+func TestInsertCoinBy_T_VendingMachineShouldHaveBalance_10(t *testing.T) {
 
 	//arrange
 	v := newVendingMachine()
@@ -19,7 +19,7 @@ func TestInsertCoinBy_T_VendingShouldHaveBalance_10(t *testing.T) {
 
 }
 
-func TestInsertCoinBy_F_VendingShouldHaveBalance_F(t *testing.T) {
+func TestInsertCoinBy_F_VendingMachineShouldHaveBalance_F(t *testing.T) {
 
 	//arrange
 	v := newVendingMachine()
@@ -36,7 +36,7 @@ func TestInsertCoinBy_F_VendingShouldHaveBalance_F(t *testing.T) {
 
 }
 
-func TestInsertCoinBy_TW_VendingShouldHaveBalance_2(t *testing.T) {
+func TestInsertCoinBy_TW_VendingMachineShouldHaveBalance_2(t *testing.T) {
 
 	//arrange
 	v := newVendingMachine()
@@ -53,7 +53,7 @@ func TestInsertCoinBy_TW_VendingShouldHaveBalance_2(t *testing.T) {
 
 }
 
-func TestInsertCoinBy_O_VendingShouldHaveBalance_1(t *testing.T) {
+func TestInsertCoinBy_O_VendingMachineShouldHaveBalance_1(t *testing.T) {
 
 	//arrange
 	v := newVendingMachine()
@@ -71,7 +71,7 @@ func TestInsertCoinBy_O_VendingShouldHaveBalance_1(t *testing.T) {
 }
 
 //addition case
-func TestInsertCoinBy_ABC_VendingShouldHaveBalance_0(t *testing.T) {
+func TestInsertCoinBy_ABC_VendingMachineShouldHaveBalance_0(t *testing.T) {
 
 	//arrange
 	v := newVendingMachine()
@@ -89,7 +89,7 @@ func TestInsertCoinBy_ABC_VendingShouldHaveBalance_0(t *testing.T) {
 }
 
 //addition case
-func TestInsertCoinBy_T_F_VendingShouldHaveBalance_15(t *testing.T) {
+func TestInsertCoinBy_T_F_VendingMachineShouldHaveBalance_15(t *testing.T) {
 
 	//arrange
 	v := newVendingMachine()
