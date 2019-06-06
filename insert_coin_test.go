@@ -1,16 +1,19 @@
-package vendingmachine
+package vendingmachine_test
 
-import "testing"
+import (
+	vm "./vendingmachine"
+	"testing"
+)
 
 func TestInsertCoinBy_T_VendingMachineShouldHaveBalance_10(t *testing.T) {
 
 	//arrange
-	v := newVendingMachine()
+	v := vm.NewVendingMachine()
 	expectedResult := 10
 
 	//action
-	v.insertCoin("T")
-	actualResult := v.showTotalBalance()
+	v.InsertCoin("T")
+	actualResult := v.ShowTotalBalance()
 
 	//assert
 	if actualResult != expectedResult {
@@ -22,12 +25,12 @@ func TestInsertCoinBy_T_VendingMachineShouldHaveBalance_10(t *testing.T) {
 func TestInsertCoinBy_F_VendingMachineShouldHaveBalance_F(t *testing.T) {
 
 	//arrange
-	v := newVendingMachine()
+	v := vm.NewVendingMachine()
 	expectedResult := 5
 
 	//action
-	v.insertCoin("F")
-	actualResult := v.showTotalBalance()
+	v.InsertCoin("F")
+	actualResult := v.ShowTotalBalance()
 
 	//assert
 	if actualResult != expectedResult {
@@ -39,12 +42,12 @@ func TestInsertCoinBy_F_VendingMachineShouldHaveBalance_F(t *testing.T) {
 func TestInsertCoinBy_TW_VendingMachineShouldHaveBalance_2(t *testing.T) {
 
 	//arrange
-	v := newVendingMachine()
+	v := vm.NewVendingMachine()
 	expectedResult := 2
 
 	//action
-	v.insertCoin("TW")
-	actualResult := v.showTotalBalance()
+	v.InsertCoin("TW")
+	actualResult := v.ShowTotalBalance()
 
 	//assert
 	if actualResult != expectedResult {
@@ -56,12 +59,12 @@ func TestInsertCoinBy_TW_VendingMachineShouldHaveBalance_2(t *testing.T) {
 func TestInsertCoinBy_O_VendingMachineShouldHaveBalance_1(t *testing.T) {
 
 	//arrange
-	v := newVendingMachine()
+	v := vm.NewVendingMachine()
 	expectedResult := 1
 
 	//action
-	v.insertCoin("O")
-	actualResult := v.showTotalBalance()
+	v.InsertCoin("O")
+	actualResult := v.ShowTotalBalance()
 
 	//assert
 	if actualResult != expectedResult {
@@ -74,12 +77,12 @@ func TestInsertCoinBy_O_VendingMachineShouldHaveBalance_1(t *testing.T) {
 func TestInsertCoinBy_ABC_VendingMachineShouldHaveBalance_0(t *testing.T) {
 
 	//arrange
-	v := newVendingMachine()
+	v := vm.NewVendingMachine()
 	expectedResult := 0
 
 	//action
-	v.insertCoin("ABC")
-	actualResult := v.showTotalBalance()
+	v.InsertCoin("ABC")
+	actualResult := v.ShowTotalBalance()
 
 	//assert
 	if actualResult != expectedResult {
@@ -92,13 +95,13 @@ func TestInsertCoinBy_ABC_VendingMachineShouldHaveBalance_0(t *testing.T) {
 func TestInsertCoinBy_T_F_VendingMachineShouldHaveBalance_15(t *testing.T) {
 
 	//arrange
-	v := newVendingMachine()
+	v := vm.NewVendingMachine()
 	expectedResult := 15
 
 	//action
-	v.insertCoin("T")
-	v.insertCoin("F")
-	actualResult := v.showTotalBalance()
+	v.InsertCoin("T")
+	v.InsertCoin("F")
+	actualResult := v.ShowTotalBalance()
 
 	//assert
 	if actualResult != expectedResult {
