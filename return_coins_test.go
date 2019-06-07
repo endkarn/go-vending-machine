@@ -87,4 +87,39 @@ func TestReturnCoinsWithVendingMachineTotalBalance_15_ShouldGet_T_F(t *testing.T
 	if actualResult != expectedResult {
 		t.Errorf("get %v but excepted %v", actualResult, expectedResult)
 	}
+
+}
+
+func TestReturnCoinsWithVendingMachineTotalBalance_8_ShouldGet_F_TW_O(t *testing.T) {
+
+	//arrange
+	v := vm.NewVendingMachine()
+	v.TotalBalance = 8
+	expectedResult := "_F_TW_O"
+
+	//action
+	actualResult := v.ReturnCoinsByTotalBalance()
+
+	//assert
+	if actualResult != expectedResult {
+		t.Errorf("get %v but excepted %v", actualResult, expectedResult)
+	}
+
+}
+
+func TestReturnCoinsWithVendingMachineTotalBalance_9_ShouldGet_F_TW_TW(t *testing.T) {
+
+	//arrange
+	v := vm.NewVendingMachine()
+	v.TotalBalance = 9
+	expectedResult := "_F_TW_TW"
+
+	//action
+	actualResult := v.ReturnCoinsByTotalBalance()
+
+	//assert
+	if actualResult != expectedResult {
+		t.Errorf("get %v but excepted %v", actualResult, expectedResult)
+	}
+
 }
