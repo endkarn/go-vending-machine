@@ -27,14 +27,22 @@ func BuyDrink(drink string) string {
 }
 
 func (v VendingMachine) ReturnCoinsByTotalBalance() string {
-	if v.TotalBalance == 5 {
-		return "F"
+	var returnCoins string
+	if v.TotalBalance >= 10 {
+		v.TotalBalance -= 10
+		returnCoins += "_T"
 	}
-	if v.TotalBalance == 2 {
-		return "TW"
+	if v.TotalBalance >= 5 {
+		v.TotalBalance -= 5
+		returnCoins += "_F"
 	}
-	if v.TotalBalance == 1 {
-		return "O"
+	if v.TotalBalance >= 2 {
+		v.TotalBalance -= 2
+		returnCoins += "_TW"
 	}
-	return "T"
+	if v.TotalBalance >= 1 {
+		v.TotalBalance -= 1
+		returnCoins += "_O"
+	}
+	return returnCoins
 }
