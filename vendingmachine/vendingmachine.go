@@ -30,21 +30,11 @@ func (v VendingMachine) ReturnCoinsByTotalBalance() string {
 	var returnCoins string
 	coinsValue := [4]int{10, 5, 2, 1}
 	coinsText := [4]string{"_T", "_F", "_TW", "_O"}
-	for v.TotalBalance >= coinsValue[0] {
-		v.TotalBalance -= coinsValue[0]
-		returnCoins += coinsText[0]
-	}
-	for v.TotalBalance >= coinsValue[1] {
-		v.TotalBalance -= coinsValue[1]
-		returnCoins += coinsText[1]
-	}
-	for v.TotalBalance >= coinsValue[2] {
-		v.TotalBalance -= coinsValue[2]
-		returnCoins += coinsText[2]
-	}
-	for v.TotalBalance >= coinsValue[3] {
-		v.TotalBalance -= coinsValue[3]
-		returnCoins += coinsText[3]
+	for i := 0; i < 4; i++ {
+		for v.TotalBalance >= coinsValue[i] {
+			v.TotalBalance -= coinsValue[i]
+			returnCoins += coinsText[i]
+		}
 	}
 	return returnCoins
 }
